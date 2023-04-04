@@ -1,9 +1,13 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, View , Linking } from 'react-native';
 
-const CircleButton = ({ onPress }) => {
+const handlePress = () => {
+  Linking.openURL(`tel:${119}`);
+}; 
+
+const CircleButton = () => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity style={styles.button} onPress={handlePress}>
       <View style={styles.greenCircle} />
       <View style={styles.blueCircle}>
         <View style={styles.innerCircle} />
